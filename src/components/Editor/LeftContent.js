@@ -10,6 +10,8 @@ const LeftContent = (props) => {
           fontSize: `${props.FontSize}px`,
           textAlign: `${props.alignPosition}`,
           color: `${props.TextColor}`,
+          fontWeight: `${props.BoldSize}`,
+          fontFamily: `${props.fontFamily}`,
         }}
       >
         {props.text}

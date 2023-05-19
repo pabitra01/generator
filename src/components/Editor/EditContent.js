@@ -8,9 +8,11 @@ const EditContent = () => {
 
   const [height, setheight] = useState("");
   const [ImageUrl, setImageUrl] = useState("");
-  const [FontSize, setFontSize] = useState("");
+  const [FontSize, setFontSize] = useState(30);
+  const [BoldSize, setBoldSize] = useState(300);
   const [ImageSize, setImageSize] = useState("");
   const [isdivs, setIsdivs] = useState(false);
+  const [fontFamily, setfontFamily] = useState("");
   const onToggleTab = () => {
     setIsdivs(!isdivs);
   };
@@ -23,41 +25,44 @@ const EditContent = () => {
     setFontStylePosition(position);
   };
   return (
-    <div className="  grid grid-rows-[50px] px-10 gap-5">
-      <div className=" row-span-6  grid grid-cols-6 gap-5">
-        <div className=" overflow-auto py-10 h-[80vh] col-span-4">
-          <LeftContent
-            color={color}
-            TextColor={TextColor}
-            isdivs={isdivs}
-            text={text}
-            height={height}
-            ImageUrl={ImageUrl}
-            alignPosition={alignPosition}
-            fontStylePosition={fontStylePosition}
-            FontSize={FontSize}
-            ImageSize={ImageSize}
-          />
-        </div>
-        <div className=" col-span-2 rounded-[10px] ">
-          <RightContent
-            setColor={setColor}
-            setheight={setheight}
-            onToggleTab={onToggleTab}
-            ImageUrl={ImageUrl}
-            FontSize={FontSize}
-            setTextColor={setTextColor}
-            setImageUrl={setImageUrl}
-            setFontSize={setFontSize}
-            isdivs={isdivs}
-            onAlign={onAlign}
-            onFontStyle={onFontStyle}
-            alignPosition={alignPosition}
-            fontStylePosition={fontStylePosition}
-            setImageSize={setImageSize}
-            setText={setText}
-          />
-        </div>
+    <div className=" row-span-6 px-10 pt-10 grid grid-cols-6 gap-5">
+      <div className=" overflow-auto  h-[80vh] col-span-4">
+        <LeftContent
+          color={color}
+          TextColor={TextColor}
+          isdivs={isdivs}
+          text={text}
+          BoldSize={BoldSize}
+          height={height}
+          fontFamily={fontFamily}
+          ImageUrl={ImageUrl}
+          alignPosition={alignPosition}
+          fontStylePosition={fontStylePosition}
+          FontSize={FontSize}
+          ImageSize={ImageSize}
+        />
+      </div>
+      <div className=" col-span-2 rounded-[10px] ">
+        <RightContent
+          setColor={setColor}
+          setheight={setheight}
+          onToggleTab={onToggleTab}
+          ImageUrl={ImageUrl}
+          FontSize={FontSize}
+          BoldSize={BoldSize}
+          setTextColor={setTextColor}
+          setImageUrl={setImageUrl}
+          setFontSize={setFontSize}
+          isdivs={isdivs}
+          setfontFamily={setfontFamily}
+          setBoldSize={setBoldSize}
+          onAlign={onAlign}
+          onFontStyle={onFontStyle}
+          alignPosition={alignPosition}
+          fontStylePosition={fontStylePosition}
+          setImageSize={setImageSize}
+          setText={setText}
+        />
       </div>
     </div>
   );

@@ -1,0 +1,294 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+<head>
+<meta charset="utf-8">
+  <meta content="width=device-width">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  
+
+  <style amp4email-boilerplate>body{visibility:hidden}</style>  
+  <style amp-custom>
+    *{
+      margin:0px;
+    }
+    body {
+      background-color:#ffffff;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin:15px 0px 0px 0px;
+      padding:30px 5px 20px 5px;
+      border:1.5px solid #A46C3742;
+      border-radius:10px;
+    }
+    .title-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .title {
+      width:100%;
+      text-align:center;
+      padding-bottom:10px;
+    }
+    .banner {
+      position:absolute;
+      bottom:-10px;
+      left:4.7rem;
+    }
+    footer {
+      width:100%;
+      display:flex;
+      justify-content:center;
+      position:absolute;
+      bottom:70px;
+      left:0;
+
+    }
+    .check {
+      color:white;
+      width:300px;
+      height:40px;
+      background-color:orange;
+      border:1px orange;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+    p {
+     position:absolute;
+      bottom:-5px;
+      left:20%;
+    }
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+
+
+
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab] {
+      flex-grow: 1;
+      text-align: center;
+      border:1.5px solid #613B24;
+      border-radius:7px;
+      height:35px;
+      width:auto;
+      margin:3px;
+      padding: var(--space-1);
+      box-shadow:0px 4px 10px #AEAEAE;
+      background-color:transparent;
+      font-weight:600;
+ 
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
+      outline: none;
+      background-color: #613B24;
+      border-radius:6px;
+      border:none;
+      color:#fff1df;
+    }
+    .product{
+       background-color: #fff1df;
+      position:absolute;
+       bottom:30%;
+    }
+    .tooltip{
+      position:absolute;
+      width:50px;
+      height:50px;
+      top:60%;
+      z-index:10;
+      border-radius:50%;
+      right:80px;
+      border:2px solid white;
+      padding:5px;
+      cursor:pointer
+    }
+    .tooltip-inner{
+      position:relative;
+      width:100%;
+      height:100%;
+      background-color:#93C03F;
+      border-radius:50%
+    }
+    .inner-text{
+      position:absolute;
+      left:70px;
+      top:10px;
+      border-bottom:5px solid yellow;
+      font-size:12px;
+    }
+    .tooltip-content{
+      position:absolute;
+      width:210px;
+      height:180px;
+      background-color:#FFF2E9;
+      bottom:70px;
+      right:0px;
+      border-radius:9px;
+       box-shadow:0px 4px 10px #AEAEAE;
+    }
+    .child{
+      display:flex;
+      align-items:center;
+     padding:5px;
+    }
+    .child img{
+      object-fit:conver;
+      margin-top:2px;
+      margin-bottom:2px;
+    }
+
+  </style>
+  </head>
+  <body>
+    <div style="padding-top:30px;padding-left:10px;padding-right:10px;width:350px;height:700px;margin:auto;position:relative;background-color:#fff1df">
+
+    <amp-img class="background-image" [hidden]="hide1" src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/background/screen-1.webp" layout='fill' style="background-color:#fff1df"></amp-img>
+    <amp-img class="background-image" hidden [hidden]="hide2" src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/background/screen-2.webp" layout='fill'></amp-img>
+    <amp-img class="background-image" hidden [hidden]="hide3" src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/background/screen-3.webp" layout='fill'></amp-img>
+    <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
+      <amp-img class="title-img" src="https://cdn.shopify.com/s/files/1/0620/1629/1045/files/logo-8-removebg_180x.png?v=1646982227" height='40' width='170' ></amp-img>
+      <div class="container">
+        <h2 class="title">Choose your Skin color </h2>
+        <button id="tab1" role="tab" aria-controls="tabpanel1" option selected on="tap:AMP.setState({ hide1: false,hide2:true,hide3:true, hide4:false, hide5:true, hide6:true, hide7:false, hide8:true, hide9:true,hidecont1:false,hidecont2:true,hidecont3:true })">Brightening</button>
+        <button id="tab2" role="tab" aria-controls="tabpanel2" option on="tap:AMP.setState({ hide2: false, hide1:true, hide3:true, hide4:true, hide5:false, hide6:true, hide7:true, hide8:false, hide9:true,hidecont1:true,hidecont2:false,hidecont3:true})">Anti-Acne</button>
+        <button id="tab3" role="tab" aria-controls="tabpanel3" option on="tap:AMP.setState({ hide3: false, hide1:true, hide2:true, hide4:true, hide5:true, hide6:false, hide7:true, hide8:true, hide9:false,hidecont1:true,hidecont2:true,hidecont3:false })">Dark Spots</button>
+      </div>
+    </amp-selector>
+      <div class="tooltip">
+        <div class="tooltip-content content-1" hidden  [hidden]="hidecont1">
+          <div class="child">
+             <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_1/Ingredient-3.webp" width="65" height="50" style="background-color:#fff1df"></amp-img>
+            <div style="padding-left:10px;">
+              <div style="font-size:12px;color:#A46C37;font-weight:bold">2% Alpha Arbutin Complex</div>
+              <div style="font-size:10px;color:#A46C37;">Gives an improved complexion and reduces pigmentation</div>
+            </div>
+          </div>
+           <div class="child">
+             <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_1/Ingredient-2.webp" width="60" height="50" style="background-color:#fff1df"></amp-img>
+            <div style="padding-left:10px;">
+              <div style="font-size:12px;color:#A46C37;font-weight:bold">3% Vitamin C Complex</div>
+              <div style="font-size:10px;color:#A46C37;">Natural skin-brightening agent that fades dark spots</div>
+            </div>
+          </div>
+           <div class="child">
+             <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_1/Ingredient-1.webp" width="50" height="50" style="background-color:#fff1df"></amp-img>
+            <div style="padding-left:10px;">
+              <div style="font-size:12px;color:#A46C37;font-weight:bold">
+Blueberry</div>
+              <div style="font-size:10px;color:#A46C37;">Helps deliver beautiful skin tone & texture</div>
+            </div>
+          </div>
+        </div>
+         <div class="tooltip-inner" role="tooltip" tabindex="5" on="tap:AMP.setState({ hide10:!hide10})">
+          <div class="inner-text"> See <br/> Ingredients</div>
+        </div>
+      </div>
+      <div class="tooltip">
+        <div class="tooltip-content content2" hidden  [hidden]="hidecont2">
+            <div class="child">
+               <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_2/Ingredient-3.webp" width="65" height="50" style="background-color:#fff1df"></amp-img>
+              <div style="padding-left:10px;">
+                <div style="font-size:12px;color:#A46C37;font-weight:bold">1% Salicylic Acid Complex</div>
+                <div style="font-size:10px;color:#A46C37;">Prevents acne from forming and fights oiliness</div>
+              </div>
+            </div>
+             <div class="child">
+               <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_2/Ingredient-2.webp" width="60" height="50" style="background-color:#fff1df"></amp-img>
+              <div style="padding-left:10px;">
+                <div style="font-size:12px;color:#A46C37;font-weight:bold">3% Glycolic Acid Complex</div>
+                <div style="font-size:10px;color:#A46C37;">Moisturizes the skin for even tone & texture</div>
+              </div>
+            </div>
+             <div class="child">
+               <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_2/Ingredient-1.webp" width="50" height="50" style="background-color:#fff1df"></amp-img>
+              <div style="padding-left:10px;">
+                <div style="font-size:12px;color:#A46C37;font-weight:bold">
+  
+  Korean Yugdugu</div>
+                <div style="font-size:10px;color:#A46C37;">Gentle exfoliator that dries out any active acne</div>
+              </div>
+            </div>
+          </div>
+         <div class="tooltip-inner" role="tooltip" tabindex="5" on="tap:AMP.setState({ hide10:!hide10})">
+          <div class="inner-text"> See <br/> Ingredients</div>
+        </div>
+      </div>
+
+
+      <div class="tooltip">
+        <div class="tooltip-content content3" hidden  [hidden]="hidecont3">
+            <div class="child">
+               <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_3/Ingredient-1.webp" width="65" height="50" style="background-color:#fff1df"></amp-img>
+              <div style="padding-left:10px;">
+                <div style="font-size:12px;color:#A46C37;font-weight:bold">25% AHA (Glycolic Acid)</div>
+                <div style="font-size:10px;color:#A46C37;">Exfoliates to reveal fresh skin underneath.</div>
+              </div>
+            </div>
+             <div class="child">
+               <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_3/Ingredient-2.webp" width="60" height="50" style="background-color:#fff1df"></amp-img>
+              <div style="padding-left:10px;">
+                <div style="font-size:12px;color:#A46C37;font-weight:bold">2% BHA (Salicylic Acid)</div>
+                <div style="font-size:10px;color:#A46C37;">Smooths for even, baby-soft skin</div>
+              </div>
+            </div>
+             <div class="child">
+               <amp-img src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/ingredient/screen_3/Ingredient-3.webp" width="50" height="50" style="background-color:#fff1df"></amp-img>
+              <div style="padding-left:10px;">
+                <div style="font-size:12px;color:#A46C37;font-weight:bold">
+  
+  5% PHA (Lactic Acid)</div>
+                <div style="font-size:10px;color:#A46C37;">Brightens and refines skin texture</div>
+              </div>
+            </div>
+          </div>
+         <div class="tooltip-inner" role="tooltip" tabindex="5" on="tap:AMP.setState({ hide10:!hide10})">
+          <div class="inner-text"> See <br/> Ingredients</div>
+        </div>
+      </div>
+
+
+
+
+
+      <div style="margin:auto;height:fit-content;width:100%;display:flex;align-items:center;justify-content:center">
+     
+
+        	<amp-img  class='product' role="product" [hidden]="hide4" src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/product-1.webp" width="200" height="250"></amp-img>
+        <amp-img class='product' role="product" hidden [hidden]="hide5" src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/product-2.webp" width='200' height='250'></amp-img>
+        <amp-img class='product' role="product" hidden [hidden]="hide6" src="https://rhym.s3.ap-south-1.amazonaws.com/games/pilgrim_banner_v2/game/assets/product/product-3.webp" width='200' height='250'></amp-img>
+
+      </div>
+    <footer style="">
+      <a [hidden]="hide7" href="https://discoverpilgrim.com/62016291045/checkouts/d694655abf28da7dd43c65da15c26e86">
+        <button class="check">Buy Now</button>
+      </a>
+      <a [hidden]="hide8" hidden href="https://discoverpilgrim.com/62016291045/checkouts/082670796b464e60c15d7c696ec95204">
+        <button class="check">Buy Now</button>
+      </a>
+      <a [hidden]="hide9" hidden href="https://discoverpilgrim.com/62016291045/checkouts/6b6c372782e9aab92de735ec5ea98f74">
+        <button class="check">Buy Now</button>
+      </a>
+      
+    </footer>
+      <div style="position:absolute;bottom:40px;width:50%;left:50%;transform:translateX(-50%)">
+        <a href='https://play.rhym.io/'>
+        <p align='center' style="font-size:12px;font-weight:bold;color:#00000050">Powered By <amp-img class='banner' style="margin-bottom:5px" src="https://rhym.io/static/media/LogoRhymColor.6ef067e628fdeaf1cc60.webp" width='20' height='20'></amp-img><span style="margin-left:2.2rem;font-weight:bold;color:#000">Rhym</span></p>
+      </a>
+      </div>
+    </div>
+  </body>
+  
+</html>

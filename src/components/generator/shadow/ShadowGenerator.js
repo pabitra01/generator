@@ -10,7 +10,6 @@ const ShadowGenerator = () => {
   const [ShadowColor, setShadowColor] = useState("#000000");
   const [ShadowPosition, setShadowPosition] = useState("");
   const [CopyCss, setCopyCss] = useState(false);
-  const [Copy, setCopy] = useState(false);
   const onCopyTextCss = () => {
     navigator.clipboard.writeText(
       `boxShadow: ${ShadowHorizontalSize}px ${ShadowVerticalSize}px ${Shadowblur}px ${ShadowSpread}px ${ShadowColor} ${ShadowPosition};`
@@ -20,9 +19,6 @@ const ShadowGenerator = () => {
       setCopyCss(false);
     }, 1000);
   };
-  const onCopyText = () => {
-    setCopy(!Copy);
-  };
   const onShadow = (position) => {
     setShadowPosition(position);
   };
@@ -31,11 +27,13 @@ const ShadowGenerator = () => {
       <div className="col-span-4 rounded-lg grid grid-rows-[7]">
         <div className=" row-span-6 flex justify-center items-center">
           <div
-            className=" px-10 text-lg font-medium w-1/2 flex justify-center transition duration-600 select-all items-center aspect-[16/9] bg-white rounded-lg"
+            className=" px-10 text-lg font-medium w-1/2 flex justify-center transition duration-600 select-none items-center aspect-[16/9] bg-white rounded-lg"
             style={{
               boxShadow: `${ShadowHorizontalSize}px ${ShadowVerticalSize}px ${Shadowblur}px ${ShadowSpread}px ${ShadowColor} ${ShadowPosition}`,
             }}
-          ></div>
+          >
+            <h1>Box Shadow Generator</h1>
+          </div>
         </div>
         <div className=" border-2 selection:text-[#00acb4] selection:bg-[#cdf5f7] relative rounded-lg flex px-5 items-center bg-white/70 backdrop-blur-xl">
           <code className=" overflow-auto ">
@@ -78,7 +76,7 @@ const ShadowGenerator = () => {
             max={100}
             min={-100}
             onChange={(e) => setShadowHorizontalSize(e.target.value)}
-            className="py-1 w-full accent-[#00acb4] rounded-lg "
+            className="py-1 w-full accent-[#00acb4] range rounded-lg "
             id=""
           />
         </div>
@@ -96,7 +94,7 @@ const ShadowGenerator = () => {
             min={-100}
             name=""
             onChange={(e) => setShadowVerticalSize(e.target.value)}
-            className="py-1 w-full  accent-[#00acb4]  rounded-lg "
+            className="py-1 w-full  accent-[#00acb4] range  rounded-lg "
             id=""
           />
         </div>
@@ -112,7 +110,7 @@ const ShadowGenerator = () => {
             min={0}
             name=""
             onChange={(e) => setShadowblur(e.target.value)}
-            className="py-1 w-full accent-[#00acb4]  rounded-lg "
+            className="py-1 w-full accent-[#00acb4] range  rounded-lg "
             id=""
           />
         </div>
@@ -128,7 +126,7 @@ const ShadowGenerator = () => {
             min={0}
             name=""
             onChange={(e) => setShadowSpread(e.target.value)}
-            className="py-1 w-full accent-[#00acb4]  rounded-lg "
+            className="py-1 w-full accent-[#00acb4] range  rounded-lg "
             id=""
           />
         </div>

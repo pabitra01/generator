@@ -4,7 +4,7 @@ import Navbar from "./common/navbar/Navbar";
 
 const App = () => {
   return (
-    <div className=" grid grid-rows-[7] ">
+    <div className="  grid-rows-[7] md:grid hidden ">
       <div className="">
         <Router />
       </div>
